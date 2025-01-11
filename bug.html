@@ -1,0 +1,5 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with classes that have conflicting styles.  For example, if you apply two classes that both define the same property (e.g., `bg-red-500` and `bg-blue-500`), the last one applied will override the previous one, but this might not be the intended behavior and can lead to unexpected results.  Debugging this is more challenging than directly inspecting the CSS, as the conflict happens during the `@apply` resolution. 
+
+```html
+<div class="bg-red-500 @apply bg-blue-500"></div>
+```
