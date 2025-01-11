@@ -1,0 +1,13 @@
+To avoid this issue, carefully examine your classes and their defined styles before applying them using `@apply`.  Refactor your classes to avoid naming conflicts or use a more selective approach to apply styles, perhaps separating them into distinct utility classes or using direct CSS where necessary.  
+
+This example uses more explicit class names to avoid the conflict. Direct CSS application is also a good alternative to `@apply` when dealing with intricate style situations.
+
+```html
+<div class="bg-red-500 bg-blue-500-override"></div>
+```
+
+Or use a different, more explicit approach without `@apply`:
+
+```html
+<div style="background-color:red;"></div>
+```
